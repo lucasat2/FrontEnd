@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <h1>Notefy </h1>
+
+        <div class="note-input">
+
+            <input type="text" id="titulo_da_nota" placeholder="Titulo da nota">
+            <textarea id="conteudo_da_nota" placeholder="Conteúdo da Nota"></textarea>
+
+            <input type="text" id="tags_da_nota" placeholder="Tags(separadas por vírgula)">
+            <button id="adicionar_nota">Adicionar Nota</button>
+        </div>
+
+        <div class="lista_de_notas" id="lista_de_notas"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

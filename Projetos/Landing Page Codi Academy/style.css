@@ -1,0 +1,737 @@
+/* =========================================
+   RESET E GERAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+}
+
+main {
+    width: 100%;
+    display: block;
+}
+
+/* =========================================
+   SEÇÃO HERO (TOPO) E WRAPPER FULL-WIDTH
+========================================= */
+#hero-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 96px 24px;
+    position: relative;
+    z-index: 2;
+    min-height: 85vh;
+}
+
+.hero-texto-form {
+    width: 45%;
+    min-width: 350px;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-texto-form h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.roxo-claro {
+    color: #b875ff;
+    white-space: nowrap;
+}
+
+.hero-texto-form h2 {
+    font-size: 22px;
+    color: #c4c4cc;
+    margin-bottom: 8px;
+}
+
+.linha-neon {
+    width: 100%;
+    max-width: 300px;
+    height: 3px;
+    background-color: #b875ff;
+    box-shadow: 0 0 10px #b875ff, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2;
+    margin: 16px 0;
+}
+
+.descricao-hero {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c4c4cc;
+    margin-bottom: 24px;
+}
+
+.hero-imagem {
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    width: 60vw;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Efeito de degradê suave na imagem do analista (baixo, esquerda e direita ) */
+.hero-imagem::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to top, #000000 0%, transparent 25%),
+        linear-gradient(to right, #000000 0%, transparent 20%),
+        linear-gradient(to left, #000000 0%, transparent 2%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* =========================================
+   FORMULÁRIO DE CAPTAÇÃO
+========================================= */
+#captacao {
+    background-color: #202024;
+    color: #e1e1e6;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+#captacao h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+form div {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: #121214;
+    color: #ffffff;
+    border: 2px solid #323238;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6a1baf;
+}
+
+/* =========================================
+   BOTÕES EXTRAS
+========================================= */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #11813a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+.btn-secundario {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 14px 28px;
+    background-color: #8A2BE2;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-secundario:hover {
+    background-color: #6a1baf;
+}
+
+/* =========================================
+   MÓDULOS E CAIXAS
+========================================= */
+#modulos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 24px;
+    background-image:
+        linear-gradient(rgba(18, 18, 20, 0.90), rgba(18, 18, 20, 0.95)),
+        url('images/3d-graph-computer-illustration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Efeito de transição do preto para o fundo da seção módulos */
+#modulos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.titulo-caixas {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.grid-caixas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+}
+
+.caixa {
+    background-color: #202024;
+    padding: 32px 20px;
+    border-radius: 12px;
+    border: 1px solid #8A2BE2;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+.icone-caixa {
+    font-size: 40px;
+    color: #b875ff;
+    margin-bottom: 12px;
+}
+
+.caixa h4 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.caixa p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c4c4cc;
+    margin-top: 0;
+}
+
+/* =========================================
+   SOBRE A CARREIRA (WRAPPER E CONTEUDO)
+========================================= */
+#carreira-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #121214;
+}
+
+#carreira-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #000000);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#sobre-carreira {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 24px 128px 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.container-duas-colunas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.coluna-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.coluna-texto h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.coluna-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c4c4cc;
+    margin-bottom: 16px;
+}
+
+.coluna-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna-imagem img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    border: 2px solid #b875ff;
+    box-shadow: 0 0 20px #b875ff, 0 0 40px #8a2be2, 0 0 60px #8a2be2;
+}
+
+/* =========================================
+   DEPOIMENTOS
+========================================= */
+#depoimentos {
+    width: 100%;
+    padding: 64px 24px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.depoimentos-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.depoimentos-imagem {
+    width: 35%;
+    background-color: #0a0a0c;
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.25) 0%, transparent 60%),
+        linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 25px 25px, 25px 25px;
+    border-radius: 8px;
+    border: 1px solid #323238;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 0 32px 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.depoimentos-imagem img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+    transform: scale(1.85);
+    transform-origin: bottom center;
+}
+
+.depoimentos-conteudo {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.depoimentos-conteudo h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card-depoimento {
+    background-color: #121214;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border: 1px solid #323238;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.estrelas {
+    color: #eab308;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-depoimento p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #c4c4cc;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.card-depoimento span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8A2BE2;
+}
+
+/* =========================================
+   NOVA SEÇÃO: CTA JORNADA 
+========================================= */
+#cta-jornada {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 80px 24px;
+    background-color: #151518;
+}
+
+#cta-jornada::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+#cta-jornada::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #000000);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cta-texto {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    z-index: 3;
+}
+
+.cta-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.cta-texto p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #c4c4cc;
+}
+
+.botoes-jornada {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 300px;
+}
+
+.btn-jornada {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #8A2BE2;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-jornada:hover {
+    background-color: #6a1baf;
+}
+
+.btn-whatsapp-jornada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #11813a;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-jornada:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+.cta-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    position: relative;
+    z-index: 3;
+}
+
+.cta-imagem img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(138, 43, 226, 0.15);
+}
+
+/* =========================================
+   ESPAÇO FINAL (LINHA DO TEMPO)
+========================================= */
+#cta-final {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+#cta-final::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000 0%, transparent 10%),
+        linear-gradient(to top, #000000 0%, transparent 10%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+#cta-final img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.25;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #000000;
+    color: #c4c4cc;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVIDADE (TABLETS E CELULARES)
+========================================= */
+@media (max-width: 1024px) {
+    .grid-caixas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 16px 48px 16px;
+    }
+
+    .roxo-claro {
+        white-space: normal;
+    }
+
+    .hero-texto-form {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .hero-imagem {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        margin-top: 32px;
+        right: 0;
+        z-index: 1;
+    }
+
+    .hero-imagem::after {
+        display: none;
+    }
+
+    .hero-imagem img {
+        object-position: top center;
+        border-radius: 12px;
+    }
+
+    .linha-neon {
+        margin: 20px auto;
+    }
+
+    .container-duas-colunas,
+    .depoimentos-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coluna-texto h2,
+    .coluna-texto,
+    .depoimentos-conteudo h2 {
+        text-align: center;
+    }
+
+    .depoimentos-imagem,
+    .depoimentos-conteudo {
+        width: 100%;
+    }
+
+    .depoimentos-imagem {
+        height: 400px;
+    }
+
+    .depoimentos-imagem img {
+        transform: scale(1.1);
+    }
+
+    .grid-caixas {
+        grid-template-columns: 1fr;
+    }
+
+    #cta-jornada {
+        flex-direction: column;
+        text-align: center;
+        padding: 48px 16px;
+        gap: 32px;
+    }
+
+    .cta-texto {
+        max-width: 100%;
+    }
+
+    .botoes-jornada {
+        margin: 0 auto;
+    }
+
+    .cta-imagem {
+        max-width: 100%;
+    }
+
+    #cta-final img {
+        height: 80px;
+    }
+}
