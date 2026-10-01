@@ -1,0 +1,51 @@
+devflix-frontend/
+├── index.html
+├── package.json
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── index.css
+    ├── pages/
+    │   ├── Login.jsx
+    │   ├── Home.jsx
+    │   └── MovieDetails.jsx
+    ├── components/
+    │   ├── Header.jsx
+    │   ├── FeaturedMovie.jsx
+    │   ├── MovieRow.jsx
+    │   └── MovieCard.jsx
+    └── data/
+        └── movies.js
+
+
+        DEVFLIX
+
+Filmes | Séries | Documentários
+
+[Filme em destaque grande]
+Título do filme
+Descrição
+Botão Assistir
+Botão Ver detalhes
+
+Lançamentos
+[Card] [Card] [Card] [Card]
+
+Ação
+[Card] [Card] [Card] [Card]
+
+Documentários
+[Card] [Card] [Card] [Card]
+
+
+
+src/
+├── components/
+├── data/
+├── pages/
+├── App.jsx
+├── main.jsx
+└── index.css
+
+
+

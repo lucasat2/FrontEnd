@@ -1,0 +1,5 @@
+npm init -y
+npm install express
+npm install cors
+npm install nodemon -D
+npm run dev
